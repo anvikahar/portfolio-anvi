@@ -25,7 +25,7 @@ export function Hero() {
                 Email Me
               </a>
               <a
-                href="/anvi_cv.docx (1) (1).pdf"
+                href="/Anvi_Kahar_Resume2026.pdf"
                 download
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
               >
