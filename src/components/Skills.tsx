@@ -1,4 +1,5 @@
 import { Code2, Database, Server, Layout, GitBranch, Wrench } from 'lucide-react';
+import { useInView } from '../hooks/useInView';
 
 const skillCategories = [
   {
@@ -40,35 +41,38 @@ const skillCategories = [
 ];
 
 export function Skills() {
+  const [ref, visible] = useInView<HTMLDivElement>({ threshold: 0.12 });
+
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Technical Skills</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             A comprehensive toolkit for building modern, scalable web applications
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category) => {
+        <div ref={ref as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, i) => {
             const Icon = category.icon;
             return (
               <div
                 key={category.title}
-                className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-slate-200"
+                className={`bg-slate-900/40 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-shadow border border-white/10 reveal ${visible ? 'is-visible' : ''}`}
+                style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className={`${category.color} p-3 rounded-lg text-white`}>
+                  <div className={`${category.color} p-3 rounded-lg text-white shadow-lg shadow-${category.color.split('-')[1]}-500/20`}>
                     <Icon size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 border border-slate-200 hover:border-slate-400 transition-colors"
+                      className="bg-slate-900/60 px-3 py-1 rounded-full text-sm text-slate-200 border border-slate-600 hover:border-slate-400 transition-colors"
                     >
                       {skill}
                     </span>

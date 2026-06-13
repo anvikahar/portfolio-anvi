@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from 'lucide-react';
+import { useInView } from '../hooks/useInView';
 
 const projects = [
   {
@@ -35,32 +36,34 @@ const projects = [
 ];
 
 export function Projects() {
+  const [ref, visible] = useInView<HTMLDivElement>({ threshold: 0.12 });
+
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Here are some of my recent projects showcasing my expertise in full-stack development
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        <div ref={ref as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, i) => (
             <div
               key={project.title}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              className={`bg-slate-900/40 backdrop-blur-sm rounded-xl overflow-hidden shadow-md card-animate reveal border border-white/10 ${visible ? 'is-visible' : ''}`}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
-              
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm line-clamp-3">{project.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-slate-300 mb-4 text-sm line-clamp-3">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs font-medium"
+                      className="bg-slate-900/60 text-slate-200 px-2 py-1 rounded text-xs font-medium border border-slate-700"
                     >
                       {tech}
                     </span>
