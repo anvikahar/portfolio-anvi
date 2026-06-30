@@ -5,7 +5,7 @@ const experiences = [
   {
     title: 'Nodejs Web, API Developer, React, Next.js & Bigcommerce Developer',
     company: 'DIT Interactive Pvt. Ltd, Ahmedabad',
-    period: '2022 - Current',
+    period: '2022 - 15th Dec 2025',
     description: 'Creating cross-platform websites and developing robust Node.js APIs. Expertise in building e-commerce solutions with BigCommerce integration and custom checkout implementations.',
     achievements: [
       'Developed 10+ Node.js APIs with MySQL, MongoDB, and DynamoDB databases',

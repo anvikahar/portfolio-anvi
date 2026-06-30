@@ -3,12 +3,6 @@ import { useInView } from '../hooks/useInView';
 
 const skillCategories = [
   {
-    title: 'Frontend',
-    icon: Layout,
-    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
-    color: 'bg-blue-500',
-  },
-  {
     title: 'Backend',
     icon: Server,
     skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Socket.io', 'JWT', 'JWT Auth', 'Serverless APIs'],
@@ -21,21 +15,29 @@ const skillCategories = [
     color: 'bg-orange-500',
   },
   {
-    title: 'DevOps & Cloud',
-    icon: Wrench,
-    skills: ['AWS', 'S3', 'Lambda', 'Git', 'GitHub', 'Serverless', 'Postman'],
-    color: 'bg-slate-600',
-  },
-  {
     title: 'Payment & Integration',
     icon: GitBranch,
     skills: ['Stripe', 'Juspay', 'BigCommerce', 'Google Maps API', 'CleverTap', 'Third-party APIs'],
     color: 'bg-red-500',
   },
   {
+    title: 'Frontend',
+    icon: Layout,
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
+    color: 'bg-blue-500',
+  },
+
+  {
+    title: 'DevOps & Cloud',
+    icon: Wrench,
+    skills: ['AWS', 'S3', 'Lambda', 'Git', 'GitHub', 'Serverless', 'Postman'],
+    color: 'bg-slate-600',
+  },
+
+  {
     title: 'Other',
     icon: Code2,
-    skills: ['Flutter', 'Codeigniter', 'PHP', 'EJS', 'API Testing', 'Admin Panels'],
+    skills: ['PHP', 'EJS', 'API Testing', 'Admin Panels'],
     color: 'bg-teal-500',
   },
 ];

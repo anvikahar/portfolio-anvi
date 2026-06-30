@@ -109,10 +109,7 @@ export function Hero() {
                 className={`hero-enter max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg ${mounted ? 'hero-enter--visible' : ''}`}
                 style={{ transitionDelay: '300ms' }}
               >
-                I build high-performance web applications, scalable REST APIs, and
-                real-time systems for startups and enterprises. Passionate about
-                clean architecture, developer experience, and shipping products
-                that scale.
+                Backend-focused MERN Stack Developer & Application Support Engineer with 6+ years of experience delivering scalable web applications, cloud-native APIs, and production-ready systems. Experienced in application maintenance, production support, incident resolution, API integrations, database optimization, and performance tuning. I enjoy building reliable software, solving complex production challenges, and helping teams deliver high-quality products. Open to remote opportunities across India, US, UK, and UAE.
               </p>
 
               {/* Tech stack */}
@@ -144,7 +141,7 @@ export function Hero() {
                   Get In Touch
                 </a>
                 <a
-                  href="/Anvi_Kahar_Resume2026.pdf"
+                  href="/Anvi_Kahar_Professional_Resume_2026.docx"
                   download
                   className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-400/40 hover:bg-cyan-500/10"
                 >
