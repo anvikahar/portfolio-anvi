@@ -66,7 +66,7 @@ export function Contact() {
                 <p className="text-sm text-slate-400 mb-4">Follow me on social media</p>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.linkedin.com/in/anvi-kahar-401b63216/"
+                    href="https://www.linkedin.com/in/anviben-kahar-365549428/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-slate-800 hover:bg-blue-600/40 p-3 rounded-lg transition-colors border border-slate-700 hover:border-blue-500"
